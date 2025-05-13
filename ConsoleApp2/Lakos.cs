@@ -31,6 +31,16 @@ namespace ConsoleApp2
             return true;
         }
 
+        public void BelepSzolgaltatasba(string szolgaltatasNeve)
+        {
+            Console.WriteLine($"{Nev} belépett a(z) {szolgaltatasNeve} szolgáltatásba.");
+        }
+
+        public void HasznalKozlekedest(string jarmuNeve)
+        {
+            Console.WriteLine($"{Nev} használja a(z) {jarmuNeve} közlekedési járművet.");
+        }
+
         public override string ToString()
         {
             return $"{Nev} ({Kor} éves, {Lakcim}, {Penz} Ft)";

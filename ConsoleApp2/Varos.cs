@@ -20,5 +20,33 @@ namespace ConsoleApp2
         {
             szolgaltatasok.Add(szolgaltatas);
         }
+
+        public void NapFutasa()
+        {
+            Console.WriteLine("A nap elkezdődött a városban!");
+            if (szolgaltatasok.Count > 0)
+            {
+                foreach (var lakos in lakosok)
+                {
+                    string szolgaltatasNev = szolgaltatasok[0].GetType().Name;
+                    lakos.BelepSzolgaltatasba(szolgaltatasNev);
+                }
+            }
+            Console.WriteLine("A nap véget ért.");
+        }
+
+        public void VarosStatusza()
+        {
+            Console.WriteLine("Város lakói:");
+            foreach (var l in lakosok)
+            {
+                Console.WriteLine($"- {l}");
+            }
+            Console.WriteLine("Szolgáltatások:");
+            foreach (var sz in szolgaltatasok)
+            {
+                Console.WriteLine($"- {sz.GetType().Name}");
+            }
+        }
     }
 }

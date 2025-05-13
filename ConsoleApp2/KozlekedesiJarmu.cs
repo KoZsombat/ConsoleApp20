@@ -34,7 +34,6 @@ namespace ConsoleApp2
 
         public void Lepes()
         {
-            // Egyszerű szimuláció: minden utas "utazik"
             Console.WriteLine($"{utasok.Count} utas utazik a(z) {Nev}-n.");
         }
     }

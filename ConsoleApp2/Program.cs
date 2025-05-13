@@ -28,11 +28,12 @@ namespace ConsoleApp2
                 varos.HozzaadLakos(l);
 
             Konyvtar konyvtar = new Konyvtar(20);
-            konyvtar.HozzaadKonyv(new Konyv("Egri csillagok", "Gárdonyi Géza", 600, 5000, 3));
-            konyvtar.HozzaadKonyv(new Konyv("Pál utcai fiúk", "Molnár Ferenc", 250, 3000, 2));
-            konyvtar.HozzaadKonyv(new Konyv("Tüskevár", "Fekete István", 320, 3500, 1));
-            konyvtar.HozzaadKonyv(new Konyv("A kőszívű ember fiai", "Jókai Mór", 400, 4000, 2));
-            konyvtar.HozzaadKonyv(new Konyv("A Pendragon legenda", "Szerb Antal", 280, 4500, 1));
+            konyvtar.Konyvek.Add(new Konyv("Egri csillagok", "Gárdonyi Géza", 600, 5000, 3));
+            konyvtar.Konyvek.Add(new Konyv("Pál utcai fiúk", "Molnár Ferenc", 250, 3000, 2));
+            konyvtar.Konyvek.Add(new Konyv("Tüskevár", "Fekete István", 320, 3500, 1));
+            konyvtar.Konyvek.Add(new Konyv("A kőszívű ember fiai", "Jókai Mór", 400, 4000, 2));
+            konyvtar.Konyvek.Add(new Konyv("A Pendragon legenda", "Szerb Antal", 280, 4500, 1));
+
             varos.SzolgaltatasInditasa(konyvtar);
 
             konyvtar.Belepes(lakosok[0]);
@@ -77,7 +78,7 @@ namespace ConsoleApp2
             for (int i = 0; i < 3; i++)
             {
                 konyvtar.Belepes(lakosok[i]);
-                konyvtar.Kolcsonoz(lakosok[i], konyvtar.GetKonyvCime(i));
+                konyvtar.Kolcsonoz(lakosok[i], konyvtar.Konyvek[i].Cim);
             }
 
             Console.WriteLine("Este: 1 lakos kávézóban rendel és fogyaszt.");

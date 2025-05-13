@@ -17,11 +17,7 @@ namespace ConsoleApp2
             maxKapacitas = kapacitas;
         }
 
-        public void HozzaadKonyv(Konyv k)
-        {
-            if (konyvek.Count < maxKapacitas)
-                konyvek.Add(k);
-        }
+        public List<Konyv> Konyvek => konyvek;
 
         public void Belepes(Lakos l)
         {
@@ -45,13 +41,6 @@ namespace ConsoleApp2
             var konyv = konyvek.Find(k => k.Cim == cim);
             if (konyv != null)
                 konyv.Peldanyszam++;
-        }
-
-        public string GetKonyvCime(int index)
-        {
-            if (index >= 0 && index < konyvek.Count)
-                return konyvek[index].Cim;
-            return null;
         }
     }
 }

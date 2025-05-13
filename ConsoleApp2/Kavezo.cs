@@ -24,7 +24,10 @@ namespace ConsoleApp2
         }
         public void Fizet(Lakos lakos, Kavezo kavezo, EtelItal etelital)
         {
-            Console.WriteLine($"{lakos.Nev} kifizette a(z) {etelital.Nev} árát: {etelital.Ar} Ft.");
+            if (lakos.Fizet((int)etelital.Ar))
+                Console.WriteLine($"{lakos.Nev} kifizette a(z) {etelital.Nev} árát: {etelital.Ar} Ft.");
+            else
+                Console.WriteLine($"{lakos.Nev} nem tudta kifizetni a(z) {etelital.Nev}-t (nincs elég pénze).");
         }
         public void Fogyaszt(Lakos lakos, EtelItal etelital)
         {

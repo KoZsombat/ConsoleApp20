@@ -10,9 +10,9 @@ namespace ConsoleApp2
     {
         public string Nev { get; set; }
         public double Ar { get; set; }
-        public string Tipus { get; set; } // "etel" vagy "ital"
+        public string Tipus { get; set; }
         public double Kaloria { get; set; }
-        public double Mennyiseg { get; set; } // liter vagy gramm
+        public double Mennyiseg { get; set; }
         public EtelItal(string nev, double ar, string tipus, double kaloria, double mennyiseg)
         {
             Nev = nev;
@@ -20,10 +20,6 @@ namespace ConsoleApp2
             Tipus = tipus;
             Kaloria = kaloria;
             Mennyiseg = mennyiseg;
-        }
-        public void Fogyaszt()
-        {
-            Console.WriteLine($"{Nev} elfogyasztva.");
         }
     }
 }
